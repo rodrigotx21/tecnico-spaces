@@ -54,7 +54,7 @@ export default {
         <div class="space_ex">
             <BreadCrumb v-for="(parent, index) in space.location" :space="parent" :last="index === space.location.length - 1" />
         </div>
-        <div class="buttons_wrapper">
+        <div class="buttons_wrapper" v-if="space?.location?.find((location) => location?.type == 'BUILDING')?.name != 'Técnico Innovation Center'">
             <button class="big_button" @click="openModal('blueprint')">
                 <img src="/icons8-blueprint.svg" alt="blueprint-icon" class="button_icon">
                 <h4 style="white-space: nowrap;">See Blueprint</h4>
