@@ -19,12 +19,12 @@
   /*--background-color: #200E13;~
   --label-color: #B19B9E;
   --card-color: #2E1A1E;*/
-  --text-color: #FFF8F7;
+  --text-color: #303241;
   --label-text-font: inherit;
 
 
-  --background-color: #001523;
-  --card-color: #00253e;
+  --background-color: #eff2f5;
+  --card-color: #ffffff;
   --label-color: #9babb1;
 }
 
@@ -40,7 +40,7 @@ body, div#app {
   background: var(--background-color);
   width: 100dvw;
   height: 100dvh;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 

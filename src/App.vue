@@ -17,7 +17,7 @@ const filteredSpaces = ref([]);
 // Function to fetch data from API
 async function fetchDataFromAPI() {
   try {
-    const response = await fetch('https://tecnico-spaces-backend.onrender.com/api/spaces');
+    const response = await fetch('https://api.spaces.rodrigotx.dev/spaces');
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -83,7 +83,7 @@ watch([searchQuery, selectedType, spaces], () => {
     }
 
     // Initialize Fuse with the appropriate dataset and options
-    const fuse = new Fuse(dataset, { keys: ['name'] });
+    const fuse = new Fuse(dataset, { keys: ['name', 'description'] });
 
     // Perform the search or return the full list if searchQuery is empty
     if (searchQuery.value.trim() === '') {

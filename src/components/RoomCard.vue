@@ -18,7 +18,8 @@ export default {
                 'campus': new URL('https://raw.githubusercontent.com/rodrigotx21/tecnico-spaces/ef3d5ce4230d6ab54fa5544c3786926c63adb191/src/assets/icons8-big-campus.svg').href,
                 'building': new URL('https://raw.githubusercontent.com/rodrigotx21/tecnico-spaces/ef3d5ce4230d6ab54fa5544c3786926c63adb191/src/assets/icons8-big-building.svg').href,
                 'floor': new URL('https://raw.githubusercontent.com/rodrigotx21/tecnico-spaces/ef3d5ce4230d6ab54fa5544c3786926c63adb191/src/assets/icons8-big-floor.svg').href,
-                'room': new URL('https://raw.githubusercontent.com/rodrigotx21/tecnico-spaces/ef3d5ce4230d6ab54fa5544c3786926c63adb191/src/assets/icons8-big-room.svg').href
+                'room': new URL('https://raw.githubusercontent.com/rodrigotx21/tecnico-spaces/ef3d5ce4230d6ab54fa5544c3786926c63adb191/src/assets/icons8-big-room.svg').href,
+                'room_subdivision': new URL('https://raw.githubusercontent.com/rodrigotx21/tecnico-spaces/ef3d5ce4230d6ab54fa5544c3786926c63adb191/src/assets/icons8-big-room.svg').href,
             }
         }
     },
@@ -46,7 +47,7 @@ export default {
         <img :src="space_icon[space.type.toLowerCase()]" alt="space-icon-big" class="room_icon">
         <div class="info">
             <h2>{{ space.name }}</h2>
-            <h3>{{ space.type.toLowerCase() }}</h3>
+            <h3>{{ space.description }}</h3>
         </div>
         <img v-if="space.alwaysOpen == true" src="/icons8-last-24-hours.svg" alt="24-hour-icon" class="clock_icon">
         </div>
@@ -73,7 +74,7 @@ export default {
 </template>
 <style scoped>
     .RoomCard {
-        border-radius: 1.25rem;
+        border-radius: 0.8rem;
         padding: 0.625rem;
         margin-bottom: 0.625rem;
         overflow: hidden;
@@ -89,7 +90,7 @@ export default {
     img.room_icon {
         height: 5rem;
         background: #464646;
-        border-radius: 0.625rem;
+        border-radius: 0.425rem;
     }
     
     .info {
@@ -136,7 +137,7 @@ export default {
         justify-content: center;
         align-items: center;
         gap: 0.625rem;
-        border-radius: 0.625rem;
+        border-radius: 0.425rem;
         cursor: pointer;
         color: var(--text-color);
     }

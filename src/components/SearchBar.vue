@@ -91,6 +91,7 @@ export default {
         padding: 0.5rem 1rem;
         background: var(--card-color);
         transition: all 300ms ease-in-out;
+        box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.15);
     }
     .SearchHeader:focus-within .SearchBar {
         margin: 1rem 0;
