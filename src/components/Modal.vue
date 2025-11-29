@@ -55,7 +55,7 @@ export default {
 
         const getEvents = async () => {
             try {
-                const response = await fetch('https://idx-spaces-backend-1874118-eldfff3daa-nw.a.run.app/api/schedule/' + props.id);
+                const response = await fetch('https://api.spaces.rodrigotx.dev/schedule/' + props.id);
                 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);

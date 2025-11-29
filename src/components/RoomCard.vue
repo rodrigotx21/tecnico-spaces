@@ -62,7 +62,7 @@ export default {
             <a v-if="space.map" :href="getMapsURL()" class="small_button">
                 <img src="/icons8-google-maps.svg" alt="schedule-icon" class="button_icon">
             </a>
-            <button v-if="space.type == 'ROOM'" class="small_button" @click="openModal('schedule')">
+            <button v-if="space.type == 'ROOM' || space.type == 'ROOM_SUBDIVISION'" class="small_button" @click="openModal('schedule')">
                 <img src="/icon-schedule.svg" alt="schedule-icon" class="button_icon">
             </button>
             <button class="small_button" @click="bookmarkSpace()">
